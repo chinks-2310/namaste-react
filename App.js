@@ -1,29 +1,53 @@
-/**
- * <div id="parent">
- *      <div id="child">
- *          <h1>I am h1 tag</h1>
- *          <h2>I am h2 tag</h2>
- *      </div>
- * </div>
- */
-
 import React from "react";
 import ReactDOM from "react-dom/client";
+import logo from "./images/logo.jpg";
 
-const parent = React.createElement("div", { id: "parent" }, [
-    React.createElement("div", { id: "child" }, [
-        React.createElement("h1", {}, "This is Namaste React 🚀"),
-        React.createElement("h2", {}, "I am an h2 tag"),
-    ]),
-    React.createElement("div", { id: "child2" }, [
-        React.createElement("h1", {}, "I am an h1 tag"),
-        React.createElement("h2", {}, "I am an h2 tag"),
-    ]),
-]);
+// React Element
 
-// const heading = React.createElement(
-//     "h1", { id: "heading" },
-//     "Hello World from React!"
-// );
+const title = (
+  <h1 className="head" tabIndex="5">
+    Namaste React using JSX🚀
+  </h1>
+);
+
+// Component Compositions
+const HeadingComponent = () => (
+  <div id="container">
+    {title}
+    <h1 className="heading"> Namaste React Functional Component </h1>
+  </div>
+);
+
+/*
+    1. Add a logo on the left side
+    2. Add a search bar in middle
+    3. Add User icon on right
+    4. Add CSS to look it nice
+*/
+
+const TopBar = () => (
+  <>
+    <header className="header">
+      <div className="left">
+        <img src={logo} alt="logo"></img>
+      </div>
+      <div className="center">
+        <input
+          type="text"
+          className="input"
+          placeholder="Enter the search value"
+        ></input>
+        <button type="submit">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+      <div className="right">
+        <i class="fa fa-user"></i>
+      </div>
+    </header>
+  </>
+);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+
+root.render(<TopBar />);

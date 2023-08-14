@@ -1,3 +1,45 @@
 #heading {
     color: red;
 }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+}
+
+.left {
+    margin-left: 30px;
+}
+
+.left img {
+    width: 50px;
+    cursor: pointer;
+    margin: 10px 40px 0 10px;
+}
+
+img:hover {
+    transform: scale(1.2);
+}
+
+.center .input {
+    width: 350px;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.input:focus {
+    border: 1px solid;
+}
+
+.center button {
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.right {
+    margin-right: 30px;
+}
