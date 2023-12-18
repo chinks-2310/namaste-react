@@ -9,10 +9,10 @@ const RestaurantCard = ({ name, cuisine, resData }) => {
         src={CDN_URL + resData?.cloudinaryImageId}
       />
       <h3>{resData?.name}</h3>
-      <h4>{resData?.cuisines.join(",")}</h4>
-      <h4>{resData?.avgRating}</h4>
+      <h4 className="cuisines">{resData?.cuisines.join(",")}</h4>
+      <h4>{resData?.avgRating} stars</h4>
       <h4>{resData?.costForTwoString?.split(" ")[0]}</h4>
-      <h4>{resData?.deliveryTime} minutes</h4>
+      <h4>{resData?.sla?.deliveryTime} minutes</h4>
     </div>
   );
 };
