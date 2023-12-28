@@ -2,6 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 import { restrautList } from "../utils/mockData";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   // State Variable - Super Powerful Variable
@@ -29,7 +30,7 @@ const Body = () => {
 
     const res = await data.json();
     const resturantDetails =
-      res?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+      res?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
 
     setListOfRestaurants(resturantDetails);
     setFilteredRestaurant(resturantDetails);
@@ -37,7 +38,7 @@ const Body = () => {
 
   // Conditional Rendering
 
-  return filteredRestaurant.length === 0 ? (
+  return filteredRestaurant?.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="body">
@@ -80,10 +81,12 @@ const Body = () => {
       </div>
       <div className="res-container">
         {filteredRestaurant?.map((restaurant) => (
-          <RestaurantCard
-            resData={restaurant?.info}
+          <Link
+            to={"/restaurants/" + restaurant?.info?.id}
             key={restaurant?.info?.id}
-          />
+          >
+            <RestaurantCard resData={restaurant?.info} />
+          </Link>
         ))}
       </div>
     </div>

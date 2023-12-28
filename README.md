@@ -39,3 +39,9 @@
 - useState() - Super powerful state variables in React
 
 - useEffect()
+
+# 2 types of Routing in web apps
+
+- Client Side Routing: We are not making any network or server call because all the components are already loaded to our App.
+
+- Server Side Routing: You make a network call, and the page that about.html is coming from server.
