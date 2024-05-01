@@ -67,13 +67,18 @@ const Body = () => {
           <button
             onClick={() => {
               // Filter the restaurant cards and update the UI
-              const filteredList = listOfRestaurants?.filter((res) =>
-                res?.info?.name
-                  ?.toLowerCase()
-                  ?.includes(searchVal?.toLowerCase())
-              );
-              setFilteredRestaurant(filteredList);
+              if (searchVal === "") {
+                setFilteredRestaurant(listOfRestaurants);
+              } else {
+                const filteredList = listOfRestaurants?.filter((res) =>
+                  res?.info?.name
+                    ?.toLowerCase()
+                    ?.includes(searchVal?.toLowerCase())
+                );
+                setFilteredRestaurant(filteredList);
+              }
             }}
+            disabled={searchVal === '' ? true : false}
           >
             Enter
           </button>
