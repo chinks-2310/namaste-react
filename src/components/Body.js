@@ -3,6 +3,7 @@ import { restrautList } from "../utils/mockData";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
   // State Variable - Super Powerful Variable
@@ -35,6 +36,16 @@ const Body = () => {
     setListOfRestaurants(resturantDetails);
     setFilteredRestaurant(resturantDetails);
   };
+
+  const onlineStatus = useOnlineStatus();
+
+  if (onlineStatus === false) {
+    return (
+      <h1>
+        Looks like you're offline!! Please check your internet connection;
+      </h1>
+    );
+  }
 
   // Conditional Rendering
 
@@ -71,7 +82,7 @@ const Body = () => {
           className="filter-btn"
           onClick={() => {
             const filteredList = listOfRestaurants?.filter(
-              (restaurant) => restaurant?.info?.avgRating > 4.0
+              (restaurant) => restaurant?.info?.avgRating > 4.2
             );
             setFilteredRestaurant(filteredList);
           }}

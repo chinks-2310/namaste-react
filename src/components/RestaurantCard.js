@@ -1,6 +1,6 @@
 import { CDN_URL } from "../utils/constants";
 
-const RestaurantCard = ({ name, cuisine, resData }) => {
+const RestaurantCard = ({ resData }) => {
   return (
     <div className="res-card">
       <img

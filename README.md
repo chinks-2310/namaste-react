@@ -9,7 +9,7 @@
 - Caching - Faster Builds
 - Image Optimization
 - Minification of our file
-- Bundling
+- Bundling - Takes all our file and make into one file
 - Compressed our files
 - Consitent Hashing
 - Code Splitting
