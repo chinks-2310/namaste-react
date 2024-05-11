@@ -23,16 +23,16 @@ const Header = () => {
         <ul>
           <li>Online Status: {onlineStatus ? "✔" : "🔴"}</li>
           <li>
-            <Link to="/"> Home </Link>
+            <Link to="/" className="home-link"> Home </Link>
           </li>
           <li>
-            <Link to="about"> About Us</Link>
+            <Link to="about" className="about-us-link"> About Us</Link>
           </li>
           <li>
-            <Link to="/contact">Contact Us</Link>
+            <Link to="/contact" className="contact-us-link">Contact Us</Link>
           </li>
           <li>
-            <Link to="/grocery">Grocery</Link>
+            <Link to="/grocery" className="grocery-link">Grocery</Link>
           </li>
           <li>Cart</li>
           {/* <button

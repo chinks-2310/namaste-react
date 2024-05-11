@@ -79,6 +79,7 @@ const Body = () => {
               }
             }}
             disabled={searchVal === '' ? true : false}
+            className="enter-button"
           >
             Enter
           </button>
@@ -100,6 +101,7 @@ const Body = () => {
           <Link
             to={"/restaurants/" + restaurant?.info?.id}
             key={restaurant?.info?.id}
+            className="resturant-link"
           >
             <RestaurantCard resData={restaurant?.info} />
           </Link>

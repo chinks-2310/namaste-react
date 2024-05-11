@@ -8,11 +8,11 @@ const RestaurantCard = ({ resData }) => {
         alt="res-logo"
         src={CDN_URL + resData?.cloudinaryImageId}
       />
-      <h3>{resData?.name}</h3>
-      <h4 className="cuisines">{resData?.cuisines.join(",")}</h4>
-      <h4>{resData?.avgRating} stars</h4>
+      <h3 className="restaurant-name">{resData?.name}</h3>
+      <h4 className="cuisines">{resData?.cuisines.join(", ")}</h4>
+      <h4 className="restaurant-average-rating">{resData?.avgRating} stars</h4>
       <h4>{resData?.costForTwoString?.split(" ")[0]}</h4>
-      <h4>{resData?.sla?.deliveryTime} minutes</h4>
+      <h4 className="restaurant-delivery-time">{resData?.sla?.deliveryTime} minutes</h4>
     </div>
   );
 };

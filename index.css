@@ -32,6 +32,7 @@
     margin: 5px;
     padding: 5px;
     width: 200px;
+    height: 400px;
     background-color: #f0f0f0;
 }
 
@@ -75,13 +76,34 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    color: black;
 }
 
 .filter {
     display: flex;
 }
 
+.enter-button{
+    margin: 5px;
+}
+
 .user-card {
     padding: 10px;
     border: 1px solid black;
+}
+
+.restaurant-name {
+    color: black;
+}
+
+.resturant-link{
+    text-decoration: none;
+}
+
+.restaurant-average-rating, .restaurant-delivery-time {
+    color: black;
+}
+
+.about-us-link, .home-link, .contact-us-link, .grocery-link {
+    text-decoration: none;
 }
