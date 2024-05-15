@@ -19,7 +19,6 @@ class UserClass extends React.Component {
     console.log("Child Component did Mount");
     const data = await fetch("https://api.github.com/users/chinks-2310");
     const json = await data.json();
-    console.log(json);
     this.setState({
       userInfo: json,
     });
@@ -53,6 +52,26 @@ class UserClass extends React.Component {
 
 export default UserClass;
 
+
+/**
+ * Parent Constructor
+  - Parent Render
+      - First Constructor
+      - First Render
+
+      - Second Constructor
+      - Second Render
+
+      <DOM updated in SINGLE BATCH>
+
+      - First ComponentDidMount()
+      - Second ComponentDidMount()
+
+  - Parent ComponentDidMount()
+
+ */
+
+
 /**
  * Mounting Life Cycle
  *    Constructor is called.
@@ -65,4 +84,20 @@ export default UserClass;
  *     <HTML (new API Data) />
  *     It will call componentDidUpdate.
  *
+ */
+
+/**
+ * -----  Mounting -----
+ * Constructor (dummy)
+ * Render (dummy)
+ *      <HTML Dummy>
+ * Component did Mount
+ *      <API call>
+ *      <this.setState>
+ * 
+ * ----- Update  -----
+ * Render (API Data)
+ * <HTML (new API data)>
+ * 
+ * Component Did Update
  */
