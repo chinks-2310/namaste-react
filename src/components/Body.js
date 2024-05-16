@@ -53,10 +53,11 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="filter">
-        <div className="search">
+      <div className=" filter flex">
+        <div className="m-4 p-4">
           <input
             type="search"
+            className="border border-solid border-black"
             placeholder="Search here"
             onChange={(e) => {
               const val = e.target.value;
@@ -79,13 +80,14 @@ const Body = () => {
               }
             }}
             disabled={searchVal === '' ? true : false}
-            className="enter-button"
+            className="px-4 py-2 bg-green-100 m-4 rounded-lg"
           >
-            Enter
+            Search
           </button>
         </div>
+        <div className="m-4 p-4 flex items-center">
         <button
-          className="filter-btn"
+          className="px-4 py-2 bg-gray-100 rounded-lg"
           onClick={() => {
             const filteredList = listOfRestaurants?.filter(
               (restaurant) => restaurant?.info?.avgRating > 4.2
@@ -95,8 +97,9 @@ const Body = () => {
         >
           Top Rated Restaurants
         </button>
+        </div>
       </div>
-      <div className="res-container">
+      <div className="flex flex-wrap">
         {filteredRestaurant?.map((restaurant) => (
           <Link
             to={"/restaurants/" + restaurant?.info?.id}
