@@ -20,7 +20,9 @@
     "homepage": "https://github.com/chinks-2310/namaste-react#readme",
     "devDependencies": {
         "parcel": "^2.9.3",
-        "process": "^0.11.10"
+        "postcss": "^8.4.38",
+        "process": "^0.11.10",
+        "tailwindcss": "^3.4.3"
     },
     "dependencies": {
         "formik": "^2.4.5",
