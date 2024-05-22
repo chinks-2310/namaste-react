@@ -4,7 +4,7 @@ class UserClass extends React.Component {
   // Constructor will receive props
   constructor(props) {
     super(props); // this things basically allows accessing this.props in a Constructor function. It calls the constructor of the parent class.
-    console.log(this.props.name + "Child Constructor");
+    // console.log(this.props.name + "Child Constructor");
 
     this.state = {
       userInfo: {
@@ -16,7 +16,7 @@ class UserClass extends React.Component {
   }
 
   async componentDidMount() {
-    console.log("Child Component did Mount");
+    // console.log("Child Component did Mount");
     const data = await fetch("https://api.github.com/users/chinks-2310");
     const json = await data.json();
     this.setState({
@@ -33,7 +33,7 @@ class UserClass extends React.Component {
   }
 
   render() {
-    console.log("Child Render");
+    // console.log("Child Render");
     return (
       <div className="user-card">
         <img src={this.state.userInfo?.avatar_url}></img>
