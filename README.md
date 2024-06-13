@@ -45,3 +45,11 @@
 - Client Side Routing: We are not making any network or server call because all the components are already loaded to our App.
 
 - Server Side Routing: You make a network call, and the page that about.html is coming from server.
+
+# Redux Toolkit
+    - Install @reduxjs/toolkit and react-redux.
+    - Build our store.
+    - Connect our store to our app.
+    - Create Slice (cart).
+    - Dispatch an action.
+    - Selector.
