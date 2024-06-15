@@ -16,6 +16,7 @@ const Cart = () => {
           className="p-2 m-2 bg-black text-white"
           onClick={handleClearCart}
           disabled={cartItems?.length === 0}
+          data-testid="clearCartBtn"
         >
           Clear Cart
         </button>

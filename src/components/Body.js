@@ -70,6 +70,7 @@ const Body = () => {
               setSearchVal(val);
             }}
             value={searchVal}
+            data-testid = "searchInput"
           ></input>
           <button
             onClick={() => {

@@ -12,6 +12,7 @@ const ItemList = ({ items, isAddButtonDisplay = true }) => {
     <div>
       {items?.map((item) => (
         <div
+          data-testid="foodItems"
           key={item?.card?.info?.id}
           className="p-2 m-2  border-gray-200 border-b-2 text-left flex justify-between"
         >
